@@ -293,24 +293,7 @@ happens at epoch 2–3.
 (+1.2 pp, p = 0.31), and Qwen3.5-4B's advantage *shrinks* with the sampling
 budget (13.3 → 11.8 pp) rather than growing as it does for the other four.
 
----
 
-## Limitations
-
-- Five base models in the 3–4 B range, one task, one dataset; we do not claim the
-  effect transfers to other scales or domains.
-- One fixed data split; seeds vary training and sampling, not the split.
-- The upstream procedure that produced the curated CoT is described in the paper
-  but is not re-runnable from this repository; the curated files are released as
-  a fixed snapshot.
-- Evaluation uses RDKit canonicalisation with no tautomer, salt or protonation
-  normalisation, so chemically equivalent but differently written molecules can
-  be scored as mismatches.
-- `chat`-format and `plain`-format models differ in loss masking
-  (`completion_only_loss`), so cross-model comparisons confound model and format.
-  The original/curated contrast is format-matched within each model.
-
----
 
 ## License and citation
 
